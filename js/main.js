@@ -9,6 +9,8 @@ const sign_Email = document.getElementById('sign-email')
 const sign_password = document.getElementById('sign-password')
 
 let user = [];
+
+
 if(localStorage.getItem('user') != null){
     user = JSON.parse(localStorage.getItem('user'))
 }
@@ -24,10 +26,10 @@ else{
 function AddUser(){
     if(sign_Name.value == '' || sign_Email.value == '' || sign_password.value == ''){
         document.getElementById('message').classList.remove('d-none')
-        console.log("Hello")
+        console.log("Null vlaues")
 
 
-    }else {
+    }else{
         let obj = {
             name : sign_Name.value,
             email : sign_Email.value , 
@@ -55,7 +57,8 @@ const sign_in_password = document.getElementById('sign-in-password')
 
 
 
-user= JSON.parse(localStorage.getItem('user'))
+user = JSON.parse(localStorage.getItem('user')) || [];
+
 
 document.getElementById('sign-in-submit').addEventListener('click' , (event) =>{
     if (sign_in_email.value == '' || sign_in_password.value == '') 
@@ -82,21 +85,16 @@ function  checkUser(){
             console.log('success')
             break;
         }
-        else if (sign_in_email.value != user[i].email){
-            document.getElementById('message').classList.add('d-none');
-            document.getElementById('NotRegisterd').classList.remove('d-none');
-            console.log('Error')
-            break;
-        }
+
 
     } 
 }
 
 document.getElementById('logOut').addEventListener('click' , (event) =>{
     event.preventDefault();
+    localStorage.removeItem('')
     document.getElementById('home').classList.add('d-none')
     document.getElementById('container').classList.remove('d-none')
-    localStorage.removeItem('')
 
     
 })
