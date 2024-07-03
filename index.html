@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP Login | Register</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container  sign-up">
+            <form >
+                <h1> Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon" > 
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </a>
+                    <a href="#" class="icon" > 
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="icon" > 
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="icon" > 
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+                <span>use email for rigisteration</span>
+                <input type="text" placeholder="Name" id="sign-name"> 
+                <input type="email" placeholder="Email" id="sign-email">
+                <input type="password" placeholder="Password" id="sign-password">
+                <div class="message d-none" id="message">All Inputs Must be Valid</div>
+                <button id="sign-up">Sign Up</button>
+            </form>
+
+        </div>
+        <div class="form-container  sign-in">
+            <form >
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon" > 
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </a>
+                    <a href="#" class="icon" > 
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="icon" > 
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="icon" > 
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+                <span>use email and password</span>
+                <input type="email" id="sign-in-email" placeholder="Email">
+                <input type="password"  id="sign-in-password" placeholder="Password">
+                <a href="#" >Forget Your Password?</a>
+                <div class="message d-none" id="messageSign">All Inputs Must be Valid </div>
+                <div class="NotRegisterd d-none" id="NotRegisterd"><p>Email or Password Invalid</p></div>
+
+
+                <button id="sign-in-submit">Sign In</button>
+            </form>
+
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-pannel toggle-left">
+                    <h1>Welcom back</h1>
+                    <p>Enter your Personal details to use all site features</p>
+
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+
+                <div class="toggle-pannel toggle-right">
+                    <h1>Hello, Friend</h1>
+                    <p>Rigister with your Personal details to use all site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+    
+    </div>
+
+    <div id="home" class=" container d-none  ">
+        <div class="home">
+            <div class="Welcom"> Welcom <span id="userName"></span></div>
+
+            <div class="log">
+                <button id="logOut">Log Out</button>
+            </div>
+        </div>
+
+        </div>
+    
+    
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
